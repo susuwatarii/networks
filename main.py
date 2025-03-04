@@ -112,7 +112,7 @@ class FileManager:
 
 def main():
     fmanager = FileManager(BASE_DIR)
-
+    
     while True:
         print(f"\ncurrent directory: {fmanager.current_dir}")
         print("  createFr (folder_name)")
@@ -130,9 +130,9 @@ def main():
         command = input(">").strip().split()
         if not command:
             continue
+            
         cmd = command[0]  # сама команда
-        args = command[1:]  # аргументы команды (если есть)
-
+        args = command[1:]  # арг-ты команды
         if cmd == "createFr" and len(args) == 1:
             fmanager.create_folder(args[0])
         elif cmd == "deleteFr" and len(args) == 1:
